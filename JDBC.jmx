@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="JDBC Test - sql12833322 - freesqldatabase.com">
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="DB_HOST" elementType="Argument">
+            <stringProp name="Argument.name">DB_HOST</stringProp>
+            <stringProp name="Argument.value">sql12.freesqldatabase.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DB_PORT" elementType="Argument">
+            <stringProp name="Argument.name">DB_PORT</stringProp>
+            <stringProp name="Argument.value">3306</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DB_NAME" elementType="Argument">
+            <stringProp name="Argument.name">DB_NAME</stringProp>
+            <stringProp name="Argument.value">sql12833322</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DB_USERNAME" elementType="Argument">
+            <stringProp name="Argument.name">DB_USERNAME</stringProp>
+            <stringProp name="Argument.value">sql12833322</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DB_PASSWORD" elementType="Argument">
+            <stringProp name="Argument.name">DB_PASSWORD</stringProp>
+            <stringProp name="Argument.value">dbRZajmnHP</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT</stringProp>
+            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMP_UP" elementType="Argument">
+            <stringProp name="Argument.name">RAMP_UP</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LOOP_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">LOOP_COUNT</stringProp>
+            <stringProp name="Argument.value">3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Pool - sql12833322" enabled="false">
+        <stringProp name="dataSource">FreeSQLDB</stringProp>
+        <stringProp name="dbUrl">jdbc:mysql://sql12.freesqldatabase.com:3306/sql12833322?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC&amp;autoReconnect=true&amp;connectTimeout=30000&amp;socketTimeout=60000</stringProp>
+        <stringProp name="driverClass">com.mysql.cj.jdbc.Driver</stringProp>
+        <stringProp name="username">sql12833322</stringProp>
+        <stringProp name="password">dbRZajmnHP</stringProp>
+        <stringProp name="poolMax">5</stringProp>
+        <stringProp name="maxWait">30000</stringProp>
+        <stringProp name="timeBetweenEvictionRunsMillis">60000</stringProp>
+        <stringProp name="minEvictableIdleTimeMillis">300000</stringProp>
+        <stringProp name="validationQuery">SELECT 1</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="initQuery"></stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="checkQuery"></stringProp>
+        <stringProp name="driver"></stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Pool - hostingerSQL">
+        <stringProp name="dataSource">FreeSQLDB</stringProp>
+        <stringProp name="dbUrl">jdbc:mysql://82.25.121.49:3306/u839030189_jmeter?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC&amp;autoReconnect=true&amp;connectTimeout=30000&amp;socketTimeout=60000</stringProp>
+        <stringProp name="driverClass">com.mysql.cj.jdbc.Driver</stringProp>
+        <stringProp name="username">u839030189_jmeter</stringProp>
+        <stringProp name="password">Arvind99%</stringProp>
+        <stringProp name="poolMax">5</stringProp>
+        <stringProp name="maxWait">30000</stringProp>
+        <stringProp name="timeBetweenEvictionRunsMillis">60000</stringProp>
+        <stringProp name="minEvictableIdleTimeMillis">300000</stringProp>
+        <stringProp name="validationQuery">SELECT 1</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="initQuery"></stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="checkQuery"></stringProp>
+        <stringProp name="driver"></stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG1 - Read Operations" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">${THREAD_COUNT}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMP_UP}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${LOOP_COUNT}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-01 DB Connection Test">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT 1 AS connection_test</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">CONN_RESULT</stringProp>
+          <stringProp name="resultVariable">connTestResult</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">1</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Connection OK">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="731846995">connection_test</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">DB Connection FAILED!</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-02 Get All Customers">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT customer_id, first_name, last_name, email, phone, city, country FROM customers ORDER BY customer_id ASC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">CUST_ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE,CITY,COUNTRY</stringProp>
+          <stringProp name="resultVariable">allCustomers</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">100</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Customers Returned">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1772061412">customer_id</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">No customers found!</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-03 Get All Products" enabled="true">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT product_id, product_name, category, price, stock_qty FROM products ORDER BY category ASC, price DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">PROD_ID,PROD_NAME,CATEGORY,PRICE,STOCK</stringProp>
+          <stringProp name="resultVariable">allProducts</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">100</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-04 Get Orders with Full Details">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT o.order_id, CONCAT(c.first_name,&apos; &apos;,c.last_name) AS customer_name, c.city, p.product_name, p.category, o.quantity, o.total_amount, o.status, o.order_date FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id INNER JOIN products p ON o.product_id = p.product_id ORDER BY o.order_date DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">ORDER_ID,CUST_NAME,CITY,PROD_NAME,CATEGORY,QTY,AMOUNT,STATUS,DATE</stringProp>
+          <stringProp name="resultVariable">allOrders</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">100</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-05 Get Customer by Random ID" enabled="true">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Prepared Select Statement</stringProp>
+          <stringProp name="query">SELECT customer_id, first_name, last_name, email, city, country FROM customers WHERE customer_id = ?</stringProp>
+          <stringProp name="queryArguments">${__Random(1,15,)}</stringProp>
+          <stringProp name="queryArgumentsTypes">INTEGER</stringProp>
+          <stringProp name="variableNames">P_ID,P_FIRST,P_LAST,P_EMAIL,P_CITY,P_COUNTRY</stringProp>
+          <stringProp name="resultVariable">singleCustomer</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">1</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-06 Sales Summary by Category" enabled="true">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT p.category, COUNT(o.order_id) AS total_orders, SUM(o.quantity) AS total_qty, ROUND(SUM(o.total_amount),2) AS total_revenue, ROUND(AVG(o.total_amount),2) AS avg_order FROM orders o INNER JOIN products p ON o.product_id = p.product_id GROUP BY p.category ORDER BY total_revenue DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">CATEGORY,TOT_ORDERS,TOT_QTY,TOT_REV,AVG_ORDER</stringProp>
+          <stringProp name="resultVariable">salesSummary</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetMaxRows">50</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Think Time 2s" enabled="true">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG2 - Write Operations">
+        <intProp name="ThreadGroup.num_threads">2</intProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-07 INSERT New Customer">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">INSERT INTO customers (first_name, last_name, email, phone, city, country) VALUES (?, ?, ?, ?, ?, ?)</stringProp>
+          <stringProp name="queryArguments">JMeter_${__threadNum},User_${__Random(1000,9999,)},jmeter_${__threadNum}_${__Random(100,999,)}@test.com,555-${__Random(1000,9999,)},TestCity,TestCountry</stringProp>
+          <stringProp name="queryArgumentsTypes">VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR</stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Insert Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-08 INSERT New Product">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">INSERT INTO products (product_name, category, price, stock_qty) VALUES (?, ?, ?, ?)</stringProp>
+          <stringProp name="queryArguments">TestProduct_${__Random(100,999,)},TestCategory,${__Random(10,999,)}.99,${__Random(1,100,)}</stringProp>
+          <stringProp name="queryArgumentsTypes">VARCHAR,VARCHAR,DECIMAL,INTEGER</stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Insert Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-09 UPDATE Customer City" enabled="true">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">UPDATE customers SET city = ?, country = ? WHERE customer_id = ?</stringProp>
+          <stringProp name="queryArguments">UpdatedCity_${__Random(1,99,)},UpdatedCountry,${__Random(1,15,)}</stringProp>
+          <stringProp name="queryArgumentsTypes">VARCHAR,VARCHAR,INTEGER</stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Update Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-10 UPDATE Product Stock">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">UPDATE products SET stock_qty = ? WHERE product_id = ?</stringProp>
+          <stringProp name="queryArguments">${__Random(10,500,)},${__Random(1,15,)}</stringProp>
+          <stringProp name="queryArgumentsTypes">INTEGER,INTEGER</stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Update Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-11 DELETE Test Customers Cleanup">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">DELETE FROM customers WHERE email LIKE &apos;jmeter_%@test.com&apos;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Delete Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-12 DELETE Test Products Cleanup">
+          <stringProp name="dataSource">FreeSQLDB</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">DELETE FROM products WHERE category = &apos;TestCategory&apos;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Delete Under 15s">
+            <stringProp name="DurationAssertion.duration">15000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Think Time 2s" enabled="true">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG3 - Transaction Test">
+        <intProp name="ThreadGroup.num_threads">2</intProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction - Place New Order Flow">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-13 TXN Step1 - Read Random Customer">
+            <stringProp name="dataSource">FreeSQLDB</stringProp>
+            <stringProp name="queryType">Prepared Select Statement</stringProp>
+            <stringProp name="query">SELECT customer_id, first_name, last_name FROM customers WHERE customer_id = ?</stringProp>
+            <stringProp name="queryArguments">${__Random(1,15,RAND_CUST)}</stringProp>
+            <stringProp name="queryArgumentsTypes">INTEGER</stringProp>
+            <stringProp name="variableNames">TXN_CUST_ID,TXN_FIRST,TXN_LAST</stringProp>
+            <stringProp name="resultVariable">txnCustomer</stringProp>
+            <stringProp name="queryTimeout">30</stringProp>
+            <stringProp name="resultSetMaxRows">1</stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+          </JDBCSampler>
+          <hashTree>
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s" enabled="true">
+              <stringProp name="DurationAssertion.duration">15000</stringProp>
+            </DurationAssertion>
+            <hashTree/>
+          </hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-14 TXN Step2 - Read Random Product">
+            <stringProp name="dataSource">FreeSQLDB</stringProp>
+            <stringProp name="queryType">Prepared Select Statement</stringProp>
+            <stringProp name="query">SELECT product_id, product_name, price FROM products WHERE product_id = ?</stringProp>
+            <stringProp name="queryArguments">${__Random(1,15,RAND_PROD)}</stringProp>
+            <stringProp name="queryArgumentsTypes">INTEGER</stringProp>
+            <stringProp name="variableNames">TXN_PROD_ID,TXN_PROD_NAME,TXN_PRICE</stringProp>
+            <stringProp name="resultVariable">txnProduct</stringProp>
+            <stringProp name="queryTimeout">30</stringProp>
+            <stringProp name="resultSetMaxRows">1</stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+          </JDBCSampler>
+          <hashTree>
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s">
+              <stringProp name="DurationAssertion.duration">15000</stringProp>
+            </DurationAssertion>
+            <hashTree/>
+          </hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-15 TXN Step3 - Place Order">
+            <stringProp name="dataSource">FreeSQLDB</stringProp>
+            <stringProp name="queryType">Prepared Update Statement</stringProp>
+            <stringProp name="query">INSERT INTO orders (customer_id, product_id, quantity, total_amount, status) VALUES (?, ?, ?, ?, &apos;PENDING&apos;)</stringProp>
+            <stringProp name="queryArguments">${TXN_CUST_ID_1},${TXN_PROD_ID_1},${__Random(1,5,)},${TXN_PRICE_1}</stringProp>
+            <stringProp name="queryArgumentsTypes">INTEGER,INTEGER,INTEGER,DECIMAL</stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout">30</stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+            <stringProp name="resultSetMaxRows"></stringProp>
+          </JDBCSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Order Placed Successfully">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1329970139">1 updates</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Place Order INSERT Failed!</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert - Under 15s" enabled="true">
+              <stringProp name="DurationAssertion.duration">15000</stringProp>
+            </DurationAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Think Time 2s" enabled="true">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
